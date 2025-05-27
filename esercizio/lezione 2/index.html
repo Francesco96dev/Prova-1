@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table form input</title>
+  </head>
+  <body>
+    <form autocomplete="on">
+      <input
+        name="nome utente"
+        placeholder="Inserisci il tuo nome"
+        type="text"
+        maxlength="20"
+        minlength="3"
+        required
+      />
+      <!-- required, campo obbligatorio -->
+      <!-- disabled, campo disabilitato -->
+      <!-- placeholder, testo segnaposto -->
+      <!-- input, campo di input -->
+      <!-- form, modulo -->
+      <!-- type, tipo di input -->
+
+      <input
+        name="password"
+        placeholder="Inserisci la tua password"
+        type="password"
+        maxlength="20"
+        minlength="6"
+        required
+      />
+      <!-- type="password", campo per password -->
+      <!-- maxlength, lunghezza massima del campo -->
+      <!-- minlength, lunghezza minima del campo -->
+
+      <input
+        name="email"
+        placeholder="Inserisci la tua email"
+        type="email"
+        maxlength="50"
+        minlength="5"
+        required
+      />
+      <!-- type="email", campo per email -->
+
+      <input name="ricerca" type="search" placeholder="Cerca qualcosa" />
+      <!-- type="search", campo di ricerca -->
+
+      <input
+        type="number"
+        name="età"
+        placeholder="Inserisci la tua età"
+        min="0"
+        max="120"
+        required
+      />
+      <!-- type="number", campo per numeri -->
+
+      <input type="range" name="range" min="0" max="100" />
+      <!-- type="range", campo per selezione di un intervallo -->
+
+      <input type="time" name="orario" />
+      <!-- type="time", campo per selezione dell'orario -->
+
+      <input type="date" name="data" />
+      <!-- type="date", campo per selezione della data -->
+
+      <input type="submit" value="Invia" />
+      <!-- submit, pulsante di invio -->
+    </form>
+
+    <table>
+      <!-- table, tabella -->
+      <thead>
+        <!-- table head, intestazione della tabella -->
+        <tr>
+          <!--table row, righe -->
+          <th>Nome</th>
+          <!-- table header, intestazione di colonna -->
+          <th>Cognome</th>
+          <th>Età</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- table body, corpo della tabella -->
+        <tr>
+          <td>Mario</td>
+          <td>Rossi</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <!-- table foot, piè di pagina della tabella -->
+        <tr>
+          <td colspan="3">Totale: 1 riga</td>
+          <!-- colspan, unire celle -->
+          <td rowspan="2">Note</td>
+          <!-- rowspan, unire righe -->
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
