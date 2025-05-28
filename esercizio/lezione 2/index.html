@@ -6,7 +6,42 @@
     <title>table form input</title>
   </head>
   <body>
-    <form autocomplete="on">
+    <table>
+      <!-- table, tabella -->
+      <thead>
+        <!-- table head, intestazione della tabella -->
+        <tr>
+          <!--table row, righe -->
+          <th>Nome</th>
+          <!-- table header, intestazione di colonna -->
+          <th>Cognome</th>
+          <th>Età</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- table body, corpo della tabella -->
+        <tr>
+          <td>Mario</td>
+          <td>Rossi</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <!-- table foot, piè di pagina della tabella -->
+        <tr>
+          <td colspan="3">Totale: 1 riga</td>
+          <!-- colspan, unire celle -->
+          <td rowspan="2">Note</td>
+          <!-- rowspan, unire righe -->
+        </tr>
+      </tfoot>
+    </table>
+    <form autocomplete="on" enctype="multipart/form-data" onsubmit="">
+      <!-- onsubmit, evento di invio del modulo, definisce cosa succede quando il modulo viene inviato -->
+      <!-- form, modulo -->
+      <!-- autocomplete, suggerimenti automatici -->
+      <!-- enctype, specifica il tipo di codifica dei dati del modulo -->
+
       <input
         name="nome utente"
         placeholder="Inserisci il tuo nome"
@@ -42,9 +77,16 @@
         minlength="5"
         required
       />
+      <input
+        type="tel"
+        name="telefono"
+        placeholder="Inserisci il tuo numero di telefono"
+      />
+      <!-- type="tel", campo per numero di telefono -->
       <!-- type="email", campo per email -->
-
-      <input name="ricerca" type="search" placeholder="Cerca qualcosa" />
+      <div>
+        <input name="ricerca" type="search" placeholder="Cerca qualcosa" />
+      </div>
       <!-- type="search", campo di ricerca -->
 
       <input
@@ -66,39 +108,88 @@
       <input type="date" name="data" />
       <!-- type="date", campo per selezione della data -->
 
-      <input type="submit" value="Invia" />
-      <!-- submit, pulsante di invio -->
-    </form>
+      <input type="datetime-local" name="data e ora" />
+      <!-- type="datetime-local", campo per selezione di data e ora -->
 
-    <table>
-      <!-- table, tabella -->
-      <thead>
-        <!-- table head, intestazione della tabella -->
-        <tr>
-          <!--table row, righe -->
-          <th>Nome</th>
-          <!-- table header, intestazione di colonna -->
-          <th>Cognome</th>
-          <th>Età</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- table body, corpo della tabella -->
-        <tr>
-          <td>Mario</td>
-          <td>Rossi</td>
-          <td>30</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <!-- table foot, piè di pagina della tabella -->
-        <tr>
-          <td colspan="3">Totale: 1 riga</td>
-          <!-- colspan, unire celle -->
-          <td rowspan="2">Note</td>
-          <!-- rowspan, unire righe -->
-        </tr>
-      </tfoot>
-    </table>
+      <div>
+        <label for="checkbox1">Accetto i termini e le condizioni</label>
+      </div>
+      <!-- label, etichetta per il campo -->
+      <div>
+        <input type="checkbox" name="valore1" />
+      </div>
+      <!-- type="checkbox", campo di selezione -->
+      <!-- puoi anche inserire input checkbox DENTRO label-->
+      <div>
+        <label>
+          <input type="radio" name="scelta" />
+          Opzione 1
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="radio" name="scelta" />
+          Opzione 2
+        </label>
+      </div>
+
+      <div>
+        <label>
+          <input type="radio" name="scelta" />
+          Opzione 3
+        </label>
+      </div>
+      <!-- label, etichetta per il campo -->
+      <!-- type="radio", campo di selezione singola -->
+
+      <div>
+        <label>
+          <input type="color" name="colore" />
+          Scegli un colore
+        </label>
+      </div>
+
+      <input type="url" name="sito web" placeholder="Inserisci un URL" />
+      <!-- type="url", campo per URL -->
+
+      <input type="file" name="file" accept=".jpg, .jpeg" multiple />
+
+      <!-- accept, specifica i tipi di file accettati -->
+      <!-- type="file", campo per caricamento file -->
+
+      <input type="hidden" name="campo nascosto" value="valore nascosto" />
+      <!-- type="hidden", campo nascosto, non visibile all'utente -->
+      <div>
+        <label for="select">Scegli un'opzione:</label>
+        <select name="opzioni" id="select">
+          <!-- select, menu a tendina,serve per selezionare un'opzione da un elenco -->
+          <option value="opzione1">Opzione 1</option>
+          <option value="opzione2" disabled >  Opzione 2 </option>
+          <option value="opzione3">Opzione 3</option>
+        <input type="submit" value="Registrati al sito" />
+        <input type="button" value="Cancella" onclick="" />
+      </div>
+      <!-- onclick, evento di click su un elemento, definisce cosa succede quando l'elemento viene cliccato -->
+      <!-- submit, pulsante di invio -->
+      <!-- button, pulsante generico -->
+      <input type="reset" value="Resetta il modulo" />
+      <!-- reset, pulsante per resettare il modulo -->
+      <div>
+        <textarea
+          name="messaggio"
+          placeholder="Inserisci il tuo messaggio"
+          rows="4"
+          cols="50"
+          maxlength="500"
+          spellcheck="true"
+        ></textarea>
+      </div>
+      <button aria-label="chiudi finestra">X  </button>
+      <button aria-hidden="true">Chiudi</button>
+      <!-- aria-hidden, nasconde l'elemento agli screen reader -->
+      <!-- aria-label, etichetta per l'accessibilità -->
+      <!-- textarea, campo di testo multilinea -->
+      
+    </form>
   </body>
 </html>
