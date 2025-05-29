@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  background-image: url("lezioni html/assets/rpg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.block {
+  font-family: "Courier New", Courier, monospace;
+  color: #b47878;
+  font-size: 20px;
+  text-align: center;
+}
+#Title {
+    font-size: 80px;
+    color: #970f0f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#element_red {
+  color: red;
+  border: #970f0f solid 2px;
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.1);
+    margin-left: 500px;
+  display: inline-block;
+  position: relative;
+  top: 20px;
+    
+  
+
+}
+#element_blue {
+  color: blue;
+  border: solid 2px #0000ff;
+  padding: 10px;
+    margin-left: 500px;
+    display: inline-block;
+    background-color: rgba(0, 0, 255, 0.1);
+    position: relative;
+    top: 20px;
+}
+#element_green {
+  color: green;
+  border: solid 2px #008000;
+  padding: 10px;
+    margin-left: 500px;
+    display: inline-block;
+    background-color: rgba(0, 128, 0, 0.1);
+    position: relative;
+    top: 20px;
+}
+#element_yellow {
+  color: yellow;
+  border: solid 2px #ffff00;
+    padding: 10px;
+    margin-left: 500px;
+    display: inline-block;
+    background-color: rgba(255, 255, 0, 0.1);
+    position: relative;
+    top: 20px;
+}
+#element_purple {
+  color: purple;
+  border:solid 2px #800080;
+  padding: 10px;
+    margin-left: 500px;
+    display: inline-block;
+    background-color: rgba(128, 0, 128, 0.1);
+    position: relative;
+    top: 20px;
+
+}
+#element_grey {
+  color: rgb(56, 52, 46);
+  border: solid 2px #808080;
+  padding: 10px;
+    margin-left: 500px;
+    display: inline-block;
+    background-color: rgba(128, 128, 128, 0.1);
+    position: relative;
+    top: 20px;
+  
+}
+
+.element_rating {
+  font-size: 20px;
+  color: #111111;
+  text-align: center;
+  margin-top: 20px;
+    padding: 10px;
+    border: solid 2px #111111;
+    background-color: rgba(17, 17, 17, 0.1);
+    display: inline-block;
+    
+    
+    
+}
+

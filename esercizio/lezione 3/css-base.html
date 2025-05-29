@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css di base</title>
+    <style hidden>
+      main {
+        background-color: lightcoral; /* metodo interno di inserimento CSS interno, nella head */
+      }
+      header {
+        background-color: lightblue;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        color: darkblue;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- metodo esterno di inserimento CSS, da usare di più -->
+  </head>
+  <body>
+    <header>
+      <h1>Css di base</h1>
+      <p id="descrizione">
+        Il CSS è un linguaggio di stile (non programmazione) che definisce
+        l'aspetto visuale delle pagine web mentre il contenuto è strutturato da
+        HTML
+      </p>
+
+      <span>
+        Il CSS consente di separare il contenuto dalla presentazione,
+        migliorando la manutenibilità e la leggibilità del codice. "Cascading
+        Style Sheets" significa "fogli di stile a cascata"
+      </span>
+      <span>
+        Cascading indica che gli stili possono essere applicati in modo
+        gerarchico, con priorità basata su specificità e ordine di applicazione.
+      </span>
+    </header>
+    <hr />
+    <main>
+      <div id="2">
+        <section>
+        <h2>dove scrivere il CSS</h2>
+        <p>
+          Il CSS può essere scritto in tre modi principali: inline, interno ed
+          esterno.
+        </p>
+        <ul>
+          <li class="scelte">
+            <strong>Inline:</strong> Gli stili sono applicati direttamente agli
+            elementi HTML tramite l'attributo "style".
+          </li>
+          <li class="scelte">
+            <strong>Interno:</strong> Gli stili sono definiti all'interno di un
+            tag style nella sezione head del documento HTML.
+          </li>
+          <li class="scelte">
+            <strong>Esterno:</strong> Gli stili sono scritti in un file CSS
+            separato e collegati al documento HTML tramite il tag `<link />`.
+          </li>
+        </ul>
+      </section>
+      </div>
+    </main>
+    <div class="immagine-di-background">
+        <h2>Immagine di background</h2>
+        <p>
+          L'immagine di background può essere impostata utilizzando la proprietà
+          CSS "background-image". Può essere applicata a qualsiasi elemento
+          HTML, come ad esempio il body o un div. </p>
+    </div>
+    <footer class="footer">
+      <h3>Questo è un esempio di footer</h3>
+      <p>Autore: Francesco Lucidi</p>
+      <p>Data: 01/01/2024</p>
+      <p>Link utili:</p>
+      <ul>
+        <li>
+          <a href="https://developer.mozilla.org/it/docs/Web/CSS">MDN Web Docs</a>
+        </li>
+        <li>
+          <a href="https://www.w3schools.com/css/">W3Schools CSS Tutorial</a>
+        </li>
+  </body>
+</html>

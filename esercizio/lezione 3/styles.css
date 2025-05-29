@@ -1,0 +1,100 @@
+/* CSS (Cascading Style Sheets) è un linguaggio di stile utilizzato per descrivere l'aspetto e la formattazione di un documento scritto in HTML */
+/* il selettore in CSS è ciò che viene prima delle parentesi graffe */
+/* il selettore può essere un tag, una classe, un id, o una combinazione di questi */
+/* dentro le parentesi graffe ci sono le proprietà e i valori */
+/* l'interno delle parentesi graffe è un blocco di regole a cascata, cioè le regole che vengono applicate agli elementi selezionati */
+/* le proprietà sono le caratteristiche degli elementi, come il colore, la dimensione, il margine, il padding, ecc. */
+/* i valori sono i valori delle proprietà, come il colore rosso, blu, verde, ecc. */
+/* le proprietà e i valori sono separati da due punti, e le regole sono separate da punto e virgola */
+/* la case sensitivity in CSS è importante, quindi i nomi delle proprietà e dei valori devono essere scritti correttamente */
+/* la virgola è usata per separare più selettori che condividono le stesse regole, i fratelli */
+/* la tilda, ondina, è usata per selezionare gli elementi che sono fratelli di un altro elemento */
+/* il selettore universale (*) seleziona tutti gli elementi del documento */
+/* il selettore di classe (.) seleziona gli elementi che hanno una classe specifica */
+/* il selettore di id (#) seleziona un elemento con un id specifico */
+/* il selettore di attributo [attr] seleziona gli elementi che hanno un attributo specifico */
+/* il selettore di discendenza (spazio) seleziona gli elementi che sono discendenti di un altro elemento */
+
+/* -- STILIZZAZIONE GENERALE ... */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} /* box-sizing: border-box; include il padding e il bordo nella larghezza e altezza degli elementi, margin: 0; rimuove i margini predefiniti, padding: 0; rimuove il padding predefinito */
+body {
+  background-color: red;
+  color: white;
+  font-family: Arial, sans-serif; /* Arial è un font sans-serif, sans-serif è una famiglia di font senza grazie. Se il browser trova Arial lo visualizza, altrimenti va su sans-serif. */
+}
+main {
+  background-color: blue;
+}
+
+.scelte {
+  color: rgb(247, 242, 242);
+  font-size: 20px;
+  padding: 10px;
+}
+#descrizione {
+  color: green;
+}
+
+div,
+p {
+  font-size: 20px !important; /* !important è usato per forzare la regola, ma dovrebbe essere usato con cautela */
+  padding: 10px;
+}
+
+/* -- UNITA' DI MISURA -- */
+
+/* In CSS, le unità di misura sono utilizzate per definire le dimensioni degli elementi, i margini, i padding, le larghezze, le altezze, ecc. */
+/* le unità di misura in CSS possono essere assolute (px, cm, mm, in) o relative (em, rem, %, vw, vh) */
+/* px è un'unità di misura assoluta che rappresenta i pixel dello schermo */
+/* em è un'unità di misura relativa alla dimensione del font dell'elemento corrente */
+/* rem è un'unità di misura relativa alla dimensione del font della radice (html) */
+/* % è un'unità di misura relativa alla dimensione del contenitore */
+/* vw e vh sono unità di misura relative alla larghezza e all'altezza della finestra del browser */
+/* overflow: hidden; è usato per nascondere il contenuto che esce dai bordi del contenitore */
+/* overflow: auto; è usato per mostrare le barre di scorrimento quando il contenuto esce dai bordi del contenitore */
+
+.scelte {
+  width: 50%; /* larghezza del 50% del contenitore */
+  height: 12vh; /* altezza del 50% della finestra del browser */
+  margin: 0 auto; /* centra l'elemento orizzontalmente */
+}
+
+.immagine-di-background {
+  background-image: url("C:\Users\fance\OneDrive\Desktop\esempi corso\Prova 1\lezioni html\assets\image.jpg"); /* URL dell'immagine di sfondo */
+  background-size: cover; /* copre l'intero contenitore */
+  background-position: center; /* centra l'immagine di sfondo */
+  width: 100vw; /* larghezza del 100% della finestra del browser */
+  height: 100vh; /* altezza del 100% della finestra del browser */
+  background-color: salmon; /* colore di sfondo di riserva */
+}
+
+/* -- STILIZZAZIONE SPECIFICA -- */
+/* I selettori di classe sono preceduti da un punto (.) e selezionano gli elementi che hanno una classe specifica */    
+/* I selettori di id sono preceduti da un cancelletto (#) e selezionano un elemento con un id specifico */
+/* I selettori di attributo sono racchiusi tra parentesi quadre e selezionano gli elementi che hanno un attributo specifico */
+/* I selettori di discendenza sono separati da uno spazio e selezionano gli elementi che sono discendenti di un altro elemento */
+/* I selettori di fratelli sono separati da una tilde (~) e selezionano gli elementi che sono fratelli di un altro elemento */
+/* I selettori di figli diretti sono separati da un maggiore (>) e selezionano gli elementi che sono figli diretti di un altro elemento */
+/* I selettori di pseudo-classi sono preceduti da due punti (:) e selezionano gli elementi in base al loro stato, come :hover, :focus, :active, ecc. */
+/* I selettori di pseudo-elementi sono preceduti da due punti (:) e selezionano parti specifiche di un elemento, come ::before, ::after, ::first-letter, ecc. */
+/* I selettori di gruppo sono separati da una virgola (,) e selezionano più elementi che condividono le stesse regole */
+
+a {
+  color: blue; /* colore del link */
+  text-decoration: none; /* rimuove la sottolineatura del link */
+}
+a:hover {
+  color: darkblue; /* colore del link quando il mouse passa sopra */
+}
+
+.footer {
+  background-color: rgb(163, 89, 89); /* colore di sfondo del footer */
+  color: white; /* colore del testo del footer */
+  text-align: center; /* centra il testo del footer */
+  padding: 20px; /* padding del footer */
+}
