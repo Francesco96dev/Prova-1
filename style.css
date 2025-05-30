@@ -101,6 +101,24 @@ body {
     display: inline-block;
     
     
-    
+}
+#contatto {
+  font-size: 20px;
+  color: #111111;
+  text-align: center;
+  margin-top: 20px;
+    padding: 10px;
+    border: solid 2px #111111;
+    background-color: rgba(17, 17, 17, 0.1);
+    display: inline-block;
+    position: sticky;
+    top: 20px;
+    text-decoration: none;
+}
+
+#contatto:hover {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 

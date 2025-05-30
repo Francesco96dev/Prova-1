@@ -1,0 +1,248 @@
+/* Definizione di variabili CSS */
+/*
+
+
+
+[data-theme="dark"] {
+  --primary-color: #0f0e0e;
+  --text-primary: #f0f0f0;
+  --background-color: #32889e;
+} 
+  questo è il tema scuro 
+  
+  
+
+
+le variabili CSS sono definite all'interno del selettore :root
+le variabili CSS sono accessibili in tutto il documento */
+
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: blue;
+  --box-primary-color: rgba(128, 128, 128, 0.267);
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+img {
+  width: 40px;
+}
+
+header {
+  background-color: var(--box-primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  justify-content: space-between;
+  height: 200px;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100vh;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+nav {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  height: 30vh;
+}
+main {
+  background-color: turquoise;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: calc(
+    100vw - 100px
+  ); /* calcola la larghezza del main sottraendo 100px dalla larghezza totale della finestra del browser */
+}
+
+.pippo {
+  background-color: var(--primary-color);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-grow: 0;
+}
+
+.paperino {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-grow: 1; /* permette all'elemento di crescere in base allo spazio disponibile */
+  order: 1; /* permette di cambiare l'ordine degli elementi, in questo caso il paperino sarà il secondo elemento */
+}
+
+.pluto {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-grow: 2; /* permette all'elemento di crescere in base allo spazio disponibile, ma con un fattore di crescita maggiore rispetto agli altri */
+}
+/* il flexbox è un layout che permette di allineare gli elementi in modo flessibile 
+    è possibile allineare gli elementi in orizzontale o in verticale, 
+    e di gestire lo spazio tra gli elementi in modo dinamico 
+.container {
+  display: flex; (display: flex; è il modo per attivare il flexbox)
+  flex-direction: column (o row, di default è row);
+  align-items: center; (centra gli elementi in orizzontale)
+  justify-content: center; (centra gli elementi in verticale) (space-between invece spazia gli elementi in modo da occupare tutto lo spazio disponibile)
+  width: 100vw; (larghezza della finestra del browser)
+  height: 100vh; (altezza della finestra del browser)
+  gap: 20px; (spazio tra gli elementi)
+  flex-wrap: wrap; (permette agli elementi di andare a capo se non c'è spazio sufficiente)
+  flex-grow: 1; (permette agli elementi di crescere in base allo spazio disponibile)
+  flex-shrink: 1; (permette agli elementi di ridursi in base allo spazio disponibile)
+ */
+
+/* media queries: permettono di applicare stili diversi in base alla larghezza della finestra del browser, si utilizzano per rendere il sito responsive, ovvero adattabile a diverse dimensioni di schermo e si inseriscono alla fine */
+/* esistono breakpoint comuni
+  - mobile: max-width: 600px
+  - tablet: max-width: 900px
+  - desktop: min-width: 901px
+  - large desktop: min-width: 1200px
+*/
+/* esempio di media query per dispositivi mobili 
+@media (max-width: 600px) {
+    header {
+        width: 100%;
+        height: 100px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav {
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    main {
+        width: 100%;
+    }
+    .pippo, .paperino, .pluto {
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+    }
+}*/
+
+@media screen and (min-width: 768px) /* per tablet e dispositivi con schermi più grandi,
+  tutte le modifiche che farò si attiverano dopo 768px */ {
+  .paperino {
+    background-color: violet;
+  }
+  header {
+    background-color: var(--box-primary-color);
+    display: flex;
+    flex-direction: row;
+
+    position: static;
+
+    right: 0;
+    width: 100vw;
+    height: 70px;
+   
+  }
+
+  nav {
+    height: 100%;
+    width: 40%;
+    flex-direction: row;
+  }
+
+  main {
+    height: calc(
+      100vh - 70px
+    ); /* calcola la larghezza del main sottraendo 70px dalla larghezza totale della finestra del browser */
+    width: 100vw; /* la larghezza del main sarà 100% della larghezza della finestra del browser */
+  }
+}
+
+/* before e after sono pseudo-elementi che permettono di aggiungere contenuti prima o dopo un elemento */
+/* si utilizzano per aggiungere decorazioni, icone, testi, ecc. senza dover modificare il markup HTML */
+/* esempio di utilizzo di before e after 
+.elemento::before {
+  content: "Prima";
+  color: red; 
+}
+
+/* TRANSIZIONI */
+/* le transizioni permettono di creare effetti di animazione quando un elemento cambia stato, ad esempio quando si passa il mouse sopra un elemento */
+/* si utilizzano per rendere il sito più interattivo e dinamico */
+
+.paperino p {
+  padding: 10px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  transition: color 0.3s ease; /* la transizione avverrà in 0.3 secondi con un effetto di easing */
+}
+
+.paperino p:hover {
+  color: black;
+  background-color: white;
+  font-size: 1.5rem; /* al passaggio del mouse il colore del testo diventa nero, lo sfondo diventa bianco e la dimensione del testo aumenta */
+  transform: scale(1.2), rotate(45deg); /* al passaggio del mouse l'elemento viene ingrandito del 20% */
+  /* la rotazione di 10 gradi non funziona perché non è stato specificato un punto di origine per la rotazione */
+  /* per far funzionare la rotazione bisogna aggiungere la proprietà transform-origin */
+  transform-origin: center; /* il punto di origine della rotazione sarà il centro dell'elemento */
+  transform: translateY(
+    50px
+  ); /* la proprietà translateY permette di spostare l'elemento di 50px verso il basso */
+  transform: translateX(
+    50px
+  ); /* la proprietà translateX permette di spostare l'elemento di 50px verso destra */
+}
+
+/* EFFETTI DI ANIMAZIONE */
+/* le animazioni permettono di creare effetti di movimento su un elemento */
+/* si utilizzano per rendere il sito più interattivo e dinamico */
+/* esempio di animazione */
+/* @keyframes nome-animazione {
+  from {
+    opacity: 0; ( l'elemento parte da opacità 0 )
+    transform: translateY(-50px); ( l'elemento parte spostato di 50px verso l'alto )
+  }
+  to {
+    opacity: 1;  (l'elemento arriva a opacità 1) 
+    transform: translateY(0); ( l'elemento torna alla sua posizione originale) 
+  }
+}
+
