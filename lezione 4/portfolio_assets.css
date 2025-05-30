@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: black;
+  --box-primary-color: rgb(170, 113, 60);
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+   
+    background-color: rgb(224, 202, 159);
+    
+}
+ul {
+  list-style: none;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: black;
+}
+h1 {
+  color: var(--primary-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0;
+}
+h2 {
+  color: var(--primary-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  text-align: center;
+  margin: 10px 0;
+}
+header {
+  background-color: rgb(219, 172, 85);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 45vh;
+  width: 320px;
+  padding: 10px;
+  position: relative;
+  flex: 1;
+  margin-right: 0;
+}
+
+nav {
+  padding: 10px;
+
+  display: flex;
+  
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  align-items: center;
+
+  height: 10vh;
+  width: 100%;
+  background-color: var(--box-primary-color);
+  transition: all 0.3s ease;
+}
+nav:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+button {
+  transition: all 0.3s ease;
+  padding: 10px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgb(160, 79, 79);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background-color: rgb(172, 63, 63);
+  color: black;
+}
+
+main {
+  background-color: rgb(177, 145, 86);
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  min-height: auto;
+  width: 320px;
+  padding: 20px;
+  font-style: italic;
+}
+
+
+.immagine_profilo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.logo_html {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border: 2px solid black;
+  border-color: aquamarine;
+  background-color: rgb(104, 126, 79);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.logo_css {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border: 2px solid black;
+  border-color: aquamarine;
+  background-color: rgb(104, 126, 79);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo_js {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border: 2px solid black;
+  border-color: aquamarine;
+  background-color: rgb(104, 126, 79);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.competenze {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 320px;
+    
+    position: relative;
+}
+
+.competenze ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: auto;
+    align-items: center;
+    border-color: aquamarine;
+    transition: all 0.3s ease;
+    position: relative;
+    
+}
+
+.competenze ul:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(104, 126, 79);
+}
+
+footer {
+  background-color: rgb(224, 202, 159);
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  gap: 10px;
+  min-height: auto;
+  width: 320px;
+  padding: 10px;
+  position: relative;
+  margin: auto;
+
+}
+
+#contatti {
+  display: flex;
+   flex-direction: column;
+  
+  gap: 10px;
+  padding: 10px;
+  width: 320px;
+  position: relative;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  header, main, footer {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  nav {
+    width: 100%;
+    height: auto;
+  }
+  
+  .competenze ul {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .immagine_profilo, .logo_html, .logo_css, .logo_js {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.classe_progetti p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    
+
+}
